@@ -23,7 +23,7 @@ navigator.geolocation.getCurrentPosition((position) => {
     success: function (result) {
       //console.log(result);
       const item = result.body.items.item;
-      console.log(item);
+      // console.log(item);
       let currentItems = "";
 
       item.forEach(function (data) {
@@ -68,8 +68,8 @@ navigator.geolocation.getCurrentPosition((position) => {
             icon: '/lbcamp/img/marker.png'
           });
         }
-        initMap();
       }
+      initMap();
     }
   });
 });
