@@ -43,6 +43,7 @@ body {
  height: 100%;
  overflow: hidden;
 }
+body#detail_page{height:auto;overflow:auto;}
 .clearfix:after {
  content: "";
  display: block;
@@ -53,14 +54,10 @@ body {
  height: auto;
  margin: auto;
 }
-.wrap {
- width: 100%;
- height: 100%;
- overflow-x: hidden;
- overflow-y: hidden;
- position: relative;
-}
+.wrap { width: 100%;height: 100%; overflow-x: hidden; overflow-y: hidden;
+ position: relative;}
 
+ body#detail_page .wrap{overflow-y: auto;}
 /* Background Image Style Code */
 .bg{position:absolute;left:0;bottom:0;transform:scale(1.1) translateY(70px);width:100%;}
 /*transform의 속성값을 중복해서 사용할 때는 값을 콤마없이 공백으로 나열 */ 
@@ -109,3 +106,18 @@ span.bar_line:nth-child(2){margin:5px auto;}
   .bt_box{width:100%;height:330px;background:#fff;position:absolute;bottom:0;z-index:999;
    border-radius:15px 15px 0 0;overflow:hidden;}
   .bt_box span{width:100%;color:#fff;background:#547c61;display:flex;padding:10px;font-size:18px;justify-content:center;}
+
+  /* Owl Carousel Box Style Code */
+  .carousel_container{max-width:1140px;padding:0 15px;margin:auto;width:100%;}
+  .carousel_container .carousel_item{margin:10px 0;}
+  .carousel_container .item_card{box-shadow:0 0 3px #547c61;border-radius: 10px;display:flex;
+  justify-content: center;align-items: center;font-size:30px;font-weight:500;border:1px solid #eee;
+ flex-direction:column;padding:10px 20px;}
+ .carousel_container .item_card .sl_img{width:100%;height:100px;overflow:hidden;border-radius:10px;
+ display:flex;align-items:center;justify-content: center;}
+ .carousel_container .item_card .sl_txt{width:100%;height:auto;}
+ .carousel_container .item_card .sl_txt h2{font-size:16px;font-weight:500;text-align: center;margin-top:10px;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+ .carousel_container .item_card .sl_txt p{font-size:12px;color:#777;margin:5px 0;text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+ .carousel_container .item_card .sl_icons{width:100%;display:flex;justify-content: center;align-items: center;}
+ .carousel_container .item_card .sl_icons img{width:20%;padding:10px;}
+ .carousel_container .item_card .sl_icons em{font-style:normal;font-size:11px;color:#777;}

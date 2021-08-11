@@ -17,7 +17,7 @@
 5.개발 중 문제 이슈
 - 오픈 데이터 수신 오류
 -지도 표시 멀티 타켓 마커 적용
-- 상세 데이터 접근키 제공 안 함
+- 상세 데이터 접근키 제공 안 함 // 각각의 좌표로 접근하여 범위를 10미터로 좁힘.
 
 6.인증키:
 QTBNviJOrxVFKg6raxnekYKEBHjZg3SbbJY2EotDoWIVniQVBqoNdCHFlFubLKXoWxgKwL8an76LcYfuJbZ7Ig%3D%3D

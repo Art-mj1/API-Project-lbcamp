@@ -17,7 +17,7 @@ $(function(){
    $(this).find('i').attr("class","fa fa-chevron-down");
   }
  });
-  //search position button box hide and show
+  // search position button box hide and show
   const h_bt_sl = $(".bt_box span").outerHeight();//outerHeight는 padding을 포함한 높이
   const h_bt_box = $(".bt_box").outerHeight();
   $(".bt_box").css("bottom",-(h_bt_box - h_bt_sl));
@@ -32,4 +32,6 @@ $(function(){
     $(".bt_box").stop().animate({"bottom": -(h_bt_box - h_bt_sl)},300);
    }
   });
-});
+
+}); 
+
