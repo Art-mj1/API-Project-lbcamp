@@ -58,10 +58,13 @@ body#detail_page{height:auto;overflow:auto;}
 .bg{position:absolute;left:0;bottom:0;transform:scale(1.1) translateY(70px);width:100%;}
 /*transform의 속성값을 중복해서 사용할 때는 값을 콤마없이 공백으로 나열 */ 
 /* Header Style Code */
-header{background:#547c61;padding:15px 0;z-index:999;position:relative;}
+header{background:#547c61;padding:15px 0;z-index:1000;position:relative;}
 header a{font-size:18px;color:#fff;}
 header .center{display:flex;justify-content: space-between;align-items: center;}
 header.sticky{position:fixed;width:100%;}
+
+header .menu{position:absolute;top:100%;display:flex;flex-direction: column;z-index:1000;background:#547c61;right:5%;display:none;}
+header .menu a{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-top:1px solid #ccc;}
 .btn{width:50px;cursor:pointer;}
 span.bar_line{display:block;width:60%;box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);height:2px;background:#fff;transition:all 0.3s;position:relative;margin:auto;border-radius:2px;}
 span.bar_line:nth-child(2){margin:5px auto;}
@@ -94,6 +97,28 @@ span.bar_line:nth-child(2){margin:5px auto;}
  .contents_bar .dropdown_menu li{padding:10px;cursor:pointer;transition:all 0.3s;border:1px solid #547c61;border-top:1px solid #ccc;}
  .contents_bar .dropdown_menu li a{width:100%;color:#fff;font-size:12px;}
 
+/* Landing Animation Style Code */
+#landing{position:fixed;width:100%;height:100%;background:#547c61;z-index:1001;top:0;left:0;display:flex;flex-direction:column;align-items:center;justify-content: center;}
+#landing .start{animation:start 0.5s 1;animation-fill-mode: forwards;}
+#landing .landing_logo{background:#fff;width:150px;height:150px;display:flex;align-items:center;justify-content: center;border-radius:50%;animation:scale-up 1s 1;}
+#landing .landing_logo img{width:60%;}
+#landing h2{color:#fff;font-weight:400;font-size: 16px;margin:10px 0;}
+
+
+@keyframes scale-up{
+ 0%{
+  transform:scale(0);opacity:0;
+ }
+ 40%{
+  transform:scale(1.3);
+ }
+ 70%{
+  transform:scale(0.7);
+ }
+ 100%{
+  transform:scale(1);opacity:1;
+ }
+}
  /* Search Position Pages Style Code */
  .contents_bar.search_position{padding:30px 0;}
  .map_img{position:absolute;width:100%;height:100%;left:0;top:0;z-index:998;}

@@ -83,5 +83,12 @@
 <script src="/lbcamp/js/main.js"></script>
 <script src="/lbcamp/js/key_position.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCW9CWV25aNbKNllvax_gO8bwj-VY9FtY&region=kr"></script>
+<script>
+   const key_btn = document.querySelector('.search_bar button');
+   key_btn.addEventListener('click',function(){
+    const key_val = document.querySelector('.search_bar input').value;
+    location.href=`/lbcamp/key_position.php?key_val=${key_val}`;
+   });
+</script>
 </body>
 </html>

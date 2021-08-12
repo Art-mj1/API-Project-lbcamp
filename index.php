@@ -55,6 +55,13 @@
  </div>
 </div>
 
+
+<div id="landing" class="start">
+ <div class="landing_logo">
+    <img src="/lbcamp/img/gocamp_logo.png" alt="">
+ </div>
+ <h2>Go Camp be free</h2>
+</div>
 <!-- Jquery Framework Load -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/lbcamp/js/main.js"></script>
