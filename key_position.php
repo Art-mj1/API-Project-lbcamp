@@ -27,7 +27,7 @@
  
 <div class="wrap">
  <!-- Main Background Image -->
-    <!-- <img src="/APIcamp/img/gocamp_bg.png" alt="" class="bg"> -->
+
  <!-- Header -->
  <?php include $_SERVER["DOCUMENT_ROOT"].'/lbcamp/include/header.php';?>
 
@@ -39,25 +39,10 @@
  <!-- Search and Select Bar -->
    <div class="contents_bar search_position">
       <div class="center">
-           <!-- <div class="search_bar">
-          <input type="text" placeholder="검색할 키워드를 입력해 주세요.">
-          <button><img src="/APIcamp/img/gocamp_icon.png" alt=""></button>
-          </div> -->
-            <div class="drop_bar">
-               <div class="dropdown">
-                  <div class="select">
-                     <span id="query_val">내 주변 캠핑장 검색</span>
-                     <i class="fa fa-chevron-down"></i>
-                  </div>
-                  <ul class="dropdown_menu">
-                  <li><a href="/lbcamp/search_position.php?radi=10000">반경 10KM 검색</a></li>
-                  <li><a href="/lbcamp/search_position.php?radi=20000">반경 20KM 검색</a></li>
-                  <li><a href="/lbcamp/search_position.php?radi=30000">반경 30KM 검색</a></li>
-                  <li><a href="/lbcamp/search_position.php?radi=40000">반경 40KM 검색</a></li>
-                  <li><a href="/lbcamp/search_position.php?radi=50000">반경 50KM 검색</a></li>
-                  </ul>
-               </div>
-            </div>
+      <div class="search_bar">
+         <input type="text" placeholder="검색할 키워드를 입력해주세요">
+         <button><img src="/lbcamp/img/gocamp_icon.png" alt=""></button>
+      </div>
       </div>
    </div>
   <!-- End of Contents bar -->
@@ -96,7 +81,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/lbcamp/js/owl.carousel.js"></script>
 <script src="/lbcamp/js/main.js"></script>
-<script src="/lbcamp/js/current_position.js"></script>
+<script src="/lbcamp/js/key_position.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCW9CWV25aNbKNllvax_gO8bwj-VY9FtY&region=kr"></script>
 </body>
 </html>

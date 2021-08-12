@@ -31,11 +31,11 @@
  
  <div class="details">
     <div class="detail_bg">
-     <img src="img/ex.jpg" alt="">
-     <span class="radi_bar"></span>
+     <!-- <img src="img/ex.jpg" alt=""> -->
+     <!-- <span class="radi_bar"></span> -->
     </div>
     <div class="detail_contents">
-       <div class="detail_wrap">
+        <!-- <div class="detail_wrap">
          <h2 class="detail_tit">캠핑장 이름</h2>
          <span class="line"></span>
          <div class="detail_info">
@@ -56,8 +56,8 @@
              <span class="info_txt">서울시 서초구 에이비시로 80번길 어쩌고 저쩌고..</span>
             </p>
          </div>
-         <!-- end of detail_info -->
-         <span class="line"></span>
+         <!-- end of detail_info-->
+         <!-- <span class="line"></span>
          <h2 class="detail_tit">캠핑장 소개</h2>
          <span class="line"></span>
          <div class="info_desc">
@@ -66,7 +66,8 @@
          <span class="line"></span>
          <h2 class="detail_tit">위치 지도</h2>
          <div class="detail_map"></div>
-       </div>
+       </div>  --> 
+       <!-- End of detail_wrap -->
     </div>
  </div>
  <!-- end of details -->
@@ -74,6 +75,7 @@
 
 <!-- Jquery Framework Load -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCW9CWV25aNbKNllvax_gO8bwj-VY9FtY&region=kr"></script>
 <script src="/lbcamp/js/main.js"></script>
 <script src="/lbcamp/js/detail_position.js"></script>
 <script>

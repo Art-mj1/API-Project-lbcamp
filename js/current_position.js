@@ -4,7 +4,7 @@ navigator.geolocation.getCurrentPosition((position) => {
   const lon = position.coords.longitude;
   const loca = window.location.href;
   const radiVal = loca.split('=')[1];
-    const queryDom = document.querySelector("#query_val");
+  const queryDom = document.querySelector("#query_val");
   const contentsBox = document.querySelector("#contents_box");
   const kmVal = radiVal.slice(0, 2);
 
