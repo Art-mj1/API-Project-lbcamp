@@ -55,8 +55,13 @@
  </div>
 </div>
 
+<?php
+ $cookie_name = "start";
+ $cookie_value = "started";
+ setcookie($cookie_name,$cookie_value,time()+30,"/");
+?>
 
-<div id="landing" class="start">
+<div id="landing" class="<?php if(!isset($_COOKIE[$cookie_name])){echo"start";} else {echo"started";} ?>">
  <div class="landing_logo">
     <img src="/lbcamp/img/gocamp_logo.png" alt="">
  </div>
@@ -72,7 +77,13 @@
     const key_val = document.querySelector('.search_bar input').value;
     location.href=`/lbcamp/key_position.php?key_val=${key_val}`;
    });
-
-</script>
+   //javascript로 쿠키 생성하는 코드
+   // function setCookie(value,min){
+   //    const exdate = new Date();//현재 날짜 객체 호출
+   //    exdate.setMinutes(exdate.getMinutes()+ 3) //날짜 정보 중 분 정보만 추출
+   //    const cookie_value = escape(value) + ((min == nu11) ? '' : '; expires=' + exdate.toUTCString());
+   // document.cookie = cookie_value;
+   // }
+   </script>
 </body>
 </html>

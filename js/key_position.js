@@ -15,35 +15,37 @@ $.ajax({
     // let detailItem = "";
     let currentItems = "";
 
-    function itemDOM() {}
-
-    if (Array.isArray(item)) {
-      item.forEach(function (data) {
-        currentItems = `
+    function itemDOM(el) {
+      currentItems = `
     
-  <div class="carousel_item">
+        <div class="carousel_item">
         <div class="item_card">
-          <a href="/lbcamp/detail_position.php?lat=${data.mapY}&lon=${data.mapX}">
+          <a href="/lbcamp/detail_position.php?lat=${el.mapY}&lon=${el.mapX}">
           <div class="sl_img">
-            <img src="${data.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
+            <img src="${el.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
           </div>
           </a>
           <div class="sl_txt">
-            <h2>${data.facltNm}</h2>
-            <p>${data.addr1}</p>
+            <h2>${el.facltNm}</h2>
+            <p>${el.addr1}</p>
           </div>
           <div class="sl_icons">
             <img src="img/ico_mart.png" alt="">
-            <em>${data.sbrsCl}</em>
+            <em>${el.sbrsCl}</em>
           </div>
 
         </div>
       </div>
       </div>
-  `;
+       `;
         contentBox.innerHTML += currentItems;
-        // console.log(data);
+    }
 
+    if (Array.isArray(item)) {
+      item.forEach(function (data) {
+        // console.log(data);
+        itemDOM(data);
+        //google Map Logics here
         var map;
 
         function initMap() {
@@ -72,29 +74,7 @@ $.ajax({
         initMap();
       });
     } else {
-      currentItems = `
-    
-  <div class="carousel_item">
-        <div class="item_card">
-          <a href="/lbcamp/detail_position.php?lat=${item.mapY}&lon=${item.mapX}">
-          <div class="sl_img">
-            <img src="${item.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
-          </div>
-          </a>
-          <div class="sl_txt">
-            <h2>${item.facltNm}</h2>
-            <p>${item.addr1}</p>
-          </div>
-          <div class="sl_icons">
-            <img src="img/ico_mart.png" alt="">
-            <em>${item.sbrsCl}</em>
-          </div>
-
-        </div>
-      </div>
-      </div>
-  `;
-      contentBox.innerHTML += currentItems;
+      itemDOM(item);
       // console.log(item);
       var map;
 
